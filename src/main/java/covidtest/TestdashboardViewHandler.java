@@ -59,7 +59,7 @@ public class TestdashboardViewHandler {
         try {
             if (diagnosed.isMe()) {
                 // view 객체 조회
-                List<Testdashboard> testdashboardList = testdashboardRepository.findByInspectionId(diagnosed.getId());
+                List<Testdashboard> testdashboardList = testdashboardRepository.findByInspectionId(diagnosed.getInspectionId());
                 for(Testdashboard testdashboard : testdashboardList){
                     // view 객체에 이벤트의 eventDirectValue 를 set 함
                     testdashboard.setStatus(diagnosed.getStatus());
